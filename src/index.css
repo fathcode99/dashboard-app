@@ -5,7 +5,7 @@
 
 @layer components {
     .li-list {
-        @apply flex items-center my-2 cursor-pointer hover:bg-slate-200
+        @apply flex items-center my-2 cursor-pointer hover:bg-slate-300
     }
 
     .li-label {
@@ -15,27 +15,22 @@
     .icon {
         @apply text-base text-fuchsia-700
     }
+
     .title {
         @apply text-xs font-bold mt-4 mb-1 text-slate-500
     }
 
     /* NAV */
     .item {
-        @apply flex items-center mr-5 relative 
+        @apply flex items-center mr-5 relative
     }
+
     .nav-icon {
         @apply text-xl
     }
-    .counter {
-        @apply w-4 h-4 bg-red-600 rounded-full text-white flex justify-center items-center text-xs font-bold absolute -mt-3 ml-4  
-    }
 
-    /* table status */
-    .active {
-        @apply bg-green-300 text-green-600
-    }
-    .inactive {
-        @apply bg-red-300 text-red-600
+    .counter {
+        @apply w-4 h-4 bg-red-600 rounded-full text-white flex justify-center items-center text-xs font-bold absolute -mt-3 ml-4
     }
 
     /* single page */
@@ -53,6 +48,6 @@
     }
 
     .input {
-        @apply w-full p-1 border-b-[1px] border-slate-600
+        @apply w-full p-1 border-b-[1px] border-slate-600 outline-none
     }
 }

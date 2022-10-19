@@ -1,21 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { DataGrid } from '@mui/x-data-grid';
 import { userColumns } from './Column';
-import { userRows } from './Row';
 import { Link } from 'react-router-dom'
+import axios from 'axios';
+
+const url = "http://localhost:2000"
 
 const DataTable = () => {
-    const [data, setData] = useState(userRows)
+    const [data, setData] = useState([])
 
-    const handleDelete = (id) => {
+    const handleDelete = async (id) => {
         setData(data.filter((item) => item.id !== id))
+        axios.delete(`${url}/ortu-db/${id}`)
     }
+
+    useEffect(() => {
+        axios.get(`${url}/ortu-db`)
+            .then(res => {
+                setData(res.data)
+            })
+    }, [])
+
     const actionColumn = [{
         field: 'action', headerName: "Action", width: 150,
         renderCell: (params) => {
             return (
                 <div className="cellAction flex items-center">
-                    <Link to="/users/test">
+                    <Link to={`/users/${params.row.id}`}>
                         <div className='viewButton py-1 px-2 bg-sky-300 text-sky-600 mr-2 rounded font-medium'>View</div>
                     </Link>
                     <div

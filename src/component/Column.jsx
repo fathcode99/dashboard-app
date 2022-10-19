@@ -19,7 +19,7 @@ export const userColumns = [
         field: "status", headerName: "STATUS", width: 150,
         renderCell: (params)=> {
             return (
-                <div className={`cellWithStatus py-1 px-2 rounded-sm font-medium ${params.row.status}`}>
+                <div className="cellWithStatus py-1 px-2 rounded-sm font-medium">
                     {params.row.status}
                 </div>
             )
