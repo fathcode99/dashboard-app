@@ -16,8 +16,8 @@ function App() {
             
             <Route path='users'>
               <Route index element={<List />} />
-              <Route path=':id' element={<Single />} />
-              <Route path='new' element={<New title="Add New User" />} />
+              <Route path=':id' element={<Single title="Data Lengkap Orang Tua" />} />
+              <Route path='new' element={<New title="Add New Members" />} />
             </Route>
           </Route>
         </Routes>

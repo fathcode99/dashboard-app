@@ -2,16 +2,17 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className='navbar h-12 border-b-2 border-slate-400 flex items-center text-sm text-slate-800'>
-      <div className="wrapper p-5 flex items-center justify-between w-full">
-        <div className="search flex items-center border-2 border-slate-400 p-1 px-2 text-sm">
-          <input type="text" placeholder='Search ...' className='input outline-none bg-transparent' />
-
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-          </svg>
-
+    <div className='navbar h-12 items-center text-sm text-slate-800'>
+      <div className="wrapper flex items-center justify-between w-full">
+        <div className="search flex items-center text-sm bg-slate-200 rounded-md w-96">
+          <input type="text" placeholder='Search ...' className='outline-none bg-transparent p-2 pl-4 w-full' />
+          <div className='bg-secondary rounded-md p-2'>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-third">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </div>
         </div>
+
         <div className="items flex items-center">
           <div className="item">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="nav-icon w-6 h-6">
