@@ -94,7 +94,7 @@ const New = ({ inputs, title }) => {
             <div className='new flex w-full'>
                 <Sidebar />
                 <div className="newContainer flex-[6_6_0%] bg-primary">
-                    <div className="rounded-l-3xl bg-fourth p-6 w-full h-full">
+                    <div className="rounded-l-3xl bg-fourth p-6 w-full h-[95%] my-4">
                         <Navbar />
                         <div className="top">
                             <div className='title-dashboard'>{title}</div>

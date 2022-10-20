@@ -40,13 +40,17 @@ const DataTable = () => {
         }
     ]
 
+   
     return (
         <>
             <div className='flex justify-between items-center'>
                 <div className='title-dashboard'> Data Orang Tua</div>
-                <Link to="/users/new">
-                    <button className='h-8 px-3 bg-secondary text-fourth font-bold items-center rounded-md'>Add New Member</button>
-                </Link>
+                <div className='flex gap-3'>
+                    <Link to="/users/new">
+                        <button className='h-8 px-3 bg-secondary text-fourth font-bold items-center rounded-md'>Add New Member</button>
+                    </Link>
+                </div>
+
             </div>
             <div className='datatable w-full h-[85%]'>
                 <DataGrid

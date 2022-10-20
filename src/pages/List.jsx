@@ -8,7 +8,7 @@ const List = () => {
     <div className='list flex'>
       <Sidebar />
       <div className="listContainer flex-[6_6_0%] bg-primary">
-        <div className="rounded-l-3xl bg-white w-full h-full p-6">
+        <div className="rounded-l-3xl bg-white w-full h-[95%] p-6 my-4">
           <Navbar />
           <DataTable />
         </div>

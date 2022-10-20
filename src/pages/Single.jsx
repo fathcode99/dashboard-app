@@ -11,10 +11,6 @@ const Single = ({ title }) => {
   const [data, setData] = useState([])
   const [isEdit, setIsEdit] = useState(false)
 
-  // modal
-  const [open, setOpen] = React.useState(false);
-  const handleClose = () => setOpen(false);
-
   let { id } = useParams();
   useEffect(() => {
     axios.get(`${url}/${id}`)
@@ -71,7 +67,7 @@ const Single = ({ title }) => {
     <div className='single flex'>
       <Sidebar />
       <div className="singleContainer flex-[6_6_0%] bg-primary">
-        <div className="rounded-l-3xl bg-white w-full h-full p-6">
+        <div className="rounded-l-3xl bg-white w-full h-[95%] p-6 my-4">
           <Navbar />
           <div className="top flex justify-between w-full items-center">
             <div className='title-dashboard'>{title}</div>
@@ -159,8 +155,8 @@ const Single = ({ title }) => {
               </>
               :
               <>
-                <div className="left flex-1 w-full">
-                  <div className="upImg w-full h-full flex justify-center items-center border">
+                <div className="left flex-1 w-full ">
+                  <div className="upImg w-full h-full flex justify-center items-center border rounded-2xl overflow-hidden">
                     <img src={data.img} alt="avatar" />
                   </div>
                 </div>
