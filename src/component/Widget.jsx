@@ -62,7 +62,7 @@ const Widget = ({ type }) => {
     }
 
     return (
-        <div className='flex justify-between flex-1 p-3 bg-white shadow-md rounded-md h-32'>
+        <div className='flex justify-between flex-1 p-3 bg-white shadow-[0_4px_6px_-1px_rgba(0,0,0,0.5)] rounded-md h-32'>
             <div className='left flex flex-col justify-between'>
                 <span className='title-widget font-semibold'>{data.title}</span>
                 <span className='counter-widget text-3xl font-bold'>{data.isMoney && "$"} {amount}</span>
