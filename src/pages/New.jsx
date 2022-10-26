@@ -40,14 +40,14 @@ const New = ({ inputs, title }) => {
     const refImg = useRef()
 
     const handleSend = () => {
-        const v_username = refUsername.current.value
-        const v_name = refName.current.value
-        const v_city = refCity.current.value
-        const v_address = refAddress.current.value
-        const v_status = refStatus.current.value
-        const v_email = refEmail.current.value
-        const v_note = refNote.current.value
-        const v_urlimg = refImg.current.value
+        let v_username = refUsername.current.value
+        let v_name = refName.current.value
+        let v_city = refCity.current.value
+        let v_address = refAddress.current.value
+        let v_status = refStatus.current.value
+        let v_email = refEmail.current.value
+        let v_note = refNote.current.value
+        let v_urlimg = refImg.current.value
 
         console.log(v_address, v_email, v_name, v_city, v_note, v_status, v_username, v_urlimg)
 
@@ -64,10 +64,23 @@ const New = ({ inputs, title }) => {
             img: v_urlimg
         }
 
-        axios.post(`${url}`, datas)
-            .then(res =>
-                setOpen(true)
-            )
+        if (v_name === "" || v_address === "" || v_city === "" || v_email === "" || v_note === "" || v_status === "" || v_urlimg === "") {
+            alert("Ada yang belum terisi")
+        }
+        else {
+            axios.post(`${url}`, datas)
+                .then(res =>
+                    setOpen(true),
+                    v_name = "",
+                    v_address = "",
+                    v_city = "",
+                    v_email = "",
+                    v_note = "",
+                    v_status = "",
+                    v_urlimg = ""
+                )
+        }
+
 
     }
 

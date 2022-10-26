@@ -1,5 +1,28 @@
-import React from "react"
-import "./style.css"
+
+
+// export const userColumns = [
+//     {
+//         Header : 'Id',
+//         accessor : 'id'
+//     },
+//     {
+//         Header : 'Nama Orang Tua',
+//         accessor : 'firstName'
+//     },
+//     {
+//         Header : 'Kota',
+//         accessor : 'city'
+//     },
+//     {
+//         Header : 'Email',
+//         accessor : 'email'
+//     },
+//     {
+//         Header : 'Status',
+//         accessor : 'status'
+//     },
+// ]
+
 
 export const userColumns = [
     { field: 'id', headerName: 'ID', width: 70 },

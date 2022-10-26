@@ -9,3 +9,10 @@
     color: #b91c1c;
     font-weight: bold;
 }
+
+.negative {
+  color: red;
+}
+.positive {
+  color: green;
+}
